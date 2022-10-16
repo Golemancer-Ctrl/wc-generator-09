@@ -45,14 +45,30 @@ const questions = [
         type: 'input',
         name: 'url',
         message: 'Provide a url to the deployed site, otherwise N/A.'
+    },
+
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Please select desired license type.',
+        choices: ['MOZ PL v2.0', 'GNU GPL v3.0', 'MIT']
     }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.log(err, 'Error occured, please try again.') : console.log('README generated!')
+)
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((data) => {
+        writeToFile("README.md", generateMarkdown(data));
+    })
+
+}
 
 // Function call to initialize app
 init();

@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
+const generateLicense = require('./utils/generateLicense');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -65,6 +66,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((data) => {
         writeToFile("README.md", generateMarkdown(data));
+        writeToFile("license.md", generateLicense(data));
     })
 
 }

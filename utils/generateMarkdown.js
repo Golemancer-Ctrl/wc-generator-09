@@ -39,7 +39,7 @@ function renderLicenseLink(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${renderLicenseBadge}
+${renderLicenseBadge(data.license)}
 
 ## Table of Contents
 - [Description](#description)
@@ -48,24 +48,24 @@ function generateMarkdown(data) {
 - [License](#license)
 - [Contributions](#contributions)
 
-# Description
+## Description
 ${data.description}
 
-#Installation
+## Installation
 ${data.installation}
 
-#Usage
+## Usage
 ${data.usage}
 
 ${data.path}
 
 Finally, the site can be found live at [${data.url}].
 
-#License
+## License
 This project uses ${data.license} licensing.
 
-#Contributions
-${contributions}
+## Contributions
+${data.contributions}
 
 `;
 }

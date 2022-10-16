@@ -1,0 +1,19 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Golemancer-Ctrl/wc-generator-09.git"
+  },
+  "author": "Golemancer-Ctrl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Golemancer-Ctrl/wc-generator-09/issues"
+  },
+  "homepage": "https://github.com/Golemancer-Ctrl/wc-generator-09#readme"
+}

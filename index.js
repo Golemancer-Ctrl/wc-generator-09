@@ -13,26 +13,20 @@ const questions = [
 
     {
         type: 'input',
-        name: 'motivation',
-        message: 'What was your motivation?'
+        name: 'description',
+        message: 'How would you describe your project?  What challenges did you face?  What did you learn?'
     },
 
     {
         type: 'input',
-        name: 'problem',
-        message: 'What problem does it solve?'
+        name: 'installation',
+        message: 'How would one install your program?'
     },
 
     {
         type: 'input',
-        name: 'challenge',
-        message: 'Describe the challenges you faced.'
-    },
-
-    {
-        type: 'input',
-        name: 'future',
-        message: 'Add some possibilities for future development.'
+        name: 'usage',
+        message: 'How is your project intended to be used?'
     },
 
     {
@@ -51,15 +45,20 @@ const questions = [
         type: 'input',
         name: 'license',
         message: 'Please select desired license type.',
-        choices: ['MOZ PL v2.0', 'GNU GPL v3.0', 'MIT']
+        choices: ['GNU GPL v3.0', 'MIT', 'Apache v2.0']
+    },
+
+    {
+        type: 'input',
+        name: 'contributions',
+        message: 'Please add any contributors or citations here.'
     }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err, 'Error occured, please try again.') : console.log('README generated!')
-)
+    err ? console.log(err, 'Error occured, please try again.') : console.log('README generated!'));
 }
 
 // TODO: Create a function to initialize app

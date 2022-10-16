@@ -59,7 +59,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
-    err ? console.log(err, 'Error occured, please try again.') : console.log('README generated!'));
+    err ? console.log(err, 'Error occured, please try again.') : console.log('File generated!'));
 }
 
 // TODO: Create a function to initialize app

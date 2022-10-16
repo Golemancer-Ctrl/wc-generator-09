@@ -57,7 +57,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-${data.path}
+[![demo file](${data.path})]
 
 Finally, the site can be found live at [${data.url}].
 

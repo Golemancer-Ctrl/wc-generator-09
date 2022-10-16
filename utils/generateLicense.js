@@ -910,9 +910,8 @@ Public License instead of this License.  But first, please read
 }
 
 function generateLicense(data) {
-    return `
-        ${whichLicense(data.license)}
-    `
+    return whichLicense(data.license);
+
 }
 
 module.exports = generateLicense;

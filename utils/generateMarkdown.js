@@ -4,11 +4,11 @@ function renderLicenseBadge(license) {
   if (!license) {
     return '';
   } else if (license === 'MIT') {
-    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]';
+    return '![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)';
   } else if (license === 'GNU GPL v3.0') {
-    return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]';
+    return '![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)';
   } else if (license === 'Apache v2.0') {
-    return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]';
+    return '![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)';
   }
 }
 
@@ -18,11 +18,11 @@ function renderLicenseLink(license) {
   if (!license) {
     return '';
   } else if (license === 'MIT') {
-    return 
+    return 'https://mit-license.org/'
   } else if (license === 'GNU GPL v3.0') {
-
+    return 'https://www.gnu.org/licenses/gpl-3.0.en.html'
   } else if (license === 'Apache v2.0') {
-
+    return 'https://www.apache.org/licenses/LICENSE-2.0.html'
   }
 }
 
@@ -34,6 +34,18 @@ function renderLicenseLink(license) {
   // License used is mentioned in the License section below.
 
 // }
+
+// Live Site Detector
+
+function liveSiteLink(url) {
+  if (!url) {
+    return '';
+  } else if (url === 'N/A') {
+    return 'N/A';
+  } else {
+    return `Finally, the live site can be found at ${url}.`
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -57,12 +69,17 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-[![demo file](${data.path})]
+![screenshot of page](${data.screenshot})
 
-Finally, the site can be found live at [${data.url}].
+![video demo](${data.video})
+
+${liveSiteLink(data.url)}
 
 ## License
 This project uses ${data.license} licensing.
+
+More information on the ${data.license} license can be found at:
+${renderLicenseLink(data.license)}
 
 ## Contributions
 ${data.contributions}

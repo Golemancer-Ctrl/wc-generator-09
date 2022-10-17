@@ -2,7 +2,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-const generateLicense = require('./utils/generateLicense');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -32,8 +31,14 @@ const questions = [
 
     {
         type: 'input',
-        name: 'path',
-        message: 'Provide a relative path to a screenshot or demo.'
+        name: 'screenshot',
+        message: 'Provide a relative path or url to a screenshot.'
+    },
+
+    {
+        type: 'input',
+        name: 'video',
+        message: 'Provide a relative path or url to a demo video.'
     },
 
     {
@@ -43,7 +48,7 @@ const questions = [
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Please select desired license type.',
         choices: ['GNU GPL v3.0', 'MIT', 'Apache v2.0']
@@ -66,7 +71,6 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((data) => {
         writeToFile("README.md", generateMarkdown(data));
-        writeToFile("license.md", generateLicense(data));
     })
 
 }

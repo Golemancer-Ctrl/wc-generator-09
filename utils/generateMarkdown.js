@@ -35,8 +35,16 @@ function renderLicenseLink(license) {
 
 // }
 
-// Live Site Detector
+//No License Detector
+function licenseDetector(license) {
+  if (!license) {
+    return 'no';
+  } else {
+    return license;
+  }
+}
 
+// Live Site Detector
 function liveSiteLink(url) {
   if (!url) {
     return '';
@@ -76,7 +84,7 @@ ${data.usage}
 ${liveSiteLink(data.url)}
 
 ## License
-This project uses ${data.license} licensing.
+This project uses ${licenseDetector(data.license)} licensing.
 
 More information on the ${data.license} license can be found at:
 ${renderLicenseLink(data.license)}

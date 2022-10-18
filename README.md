@@ -18,9 +18,9 @@ Simply download the files from my GitHub repository.  It can be found at my prof
 ## Usage
 It is intended to save a developer precious time and effort in creating a README for their project, sparing them the tedium of manually formatting one from scratch or copying one in from another file.
 
-![screenshot of page](./assets/sampleREADME.md)
+![screenshot of page](./utils/assets/sampleREADME.png)
 
-![video demo](./assets/demo-video.webm)
+![video demo](./utils/assets/demo-video.webm)
 
 N/A
 

@@ -82,9 +82,9 @@ ${data.usage}
 
 ![screenshot of page](${data.screenshot})
 
-![video demo](${data.video})
+[${data.video}]
 
-![live site](${liveSiteLink(data.url)})
+[${liveSiteLink(data.url)}]
 
 ## License
 

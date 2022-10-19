@@ -20,9 +20,9 @@ It is intended to save a developer precious time and effort in creating a README
 
 ![screenshot of page](./utils/assets/sampleREADME.png)
 
-![video demo]()
+[https://watch.screencastify.com/v/kAGREJCuR5MZXEAeGBDT]
 
-![live site](N/A)
+[N/A]
 
 ## License
 This project uses MIT licensing.

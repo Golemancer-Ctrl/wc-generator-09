@@ -20,7 +20,7 @@ It is intended to save a developer precious time and effort in creating a README
 
 ![screenshot of page](./utils/assets/sampleREADME.png)
 
-[https://watch.screencastify.com/v/kAGREJCuR5MZXEAeGBDT]
+[https://watch.screencastify.com/v/Y0xSabE61ljjfNEIwzOa]
 
 [N/A]
 

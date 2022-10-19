@@ -40,10 +40,10 @@ function licenseDetector(license) {
   if (license === 'No License') {
     return 'N/A';
   } else {
-    return `This project uses ${data.license} licensing.
+    return `This project uses ${license} licensing.
 
-    More information on the ${data.license} license can be found at:
-    ${renderLicenseLink(data.license)}`;
+    More information on the ${license} license can be found at:
+    ${renderLicenseLink(license)}`;
   }
 }
 

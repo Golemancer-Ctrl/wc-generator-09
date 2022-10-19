@@ -37,10 +37,13 @@ function renderLicenseLink(license) {
 
 //No License Detector
 function licenseDetector(license) {
-  if (!license) {
-    return 'no';
+  if (license === 'No License') {
+    return 'N/A';
   } else {
-    return license;
+    return `This project uses ${data.license} licensing.
+
+    More information on the ${data.license} license can be found at:
+    ${renderLicenseLink(data.license)}`;
   }
 }
 
@@ -84,10 +87,8 @@ ${data.usage}
 ${liveSiteLink(data.url)}
 
 ## License
-This project uses ${licenseDetector(data.license)} licensing.
 
-More information on the ${data.license} license can be found at:
-${renderLicenseLink(data.license)}
+${licenseDetector(data.license)}
 
 ## Contributions
 ${data.contributions}

@@ -20,8 +20,6 @@ It is intended to save a developer precious time and effort in creating a README
 
 ![screenshot of page](./utils/assets/sampleREADME.png)
 
-![video demo](./utils/assets/demo-video.webm)
-
 N/A
 
 ## License

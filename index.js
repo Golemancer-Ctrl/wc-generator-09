@@ -37,12 +37,6 @@ const questions = [
 
     {
         type: 'input',
-        name: 'video',
-        message: 'Provide a relative path or url to a demo video.'
-    },
-
-    {
-        type: 'input',
         name: 'url',
         message: 'Provide a url to the deployed site, otherwise N/A.'
     },
